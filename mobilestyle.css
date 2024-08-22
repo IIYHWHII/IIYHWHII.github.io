@@ -1,0 +1,375 @@
+
+/* ----------------------------------------------------------------------*/
+/* Media Query para dispositivos móveis */
+@media (max-width: 768px) {
+   
+    
+    body{
+        display: flex;
+        flex-direction: column;
+        background: url(assets/seja-o-futuro.png);
+        background-size: 300%;
+        max-width: 1920px;
+        height: auto;
+        /*background-size: 400% 400%; /* Aumenta o tamanho do background para dar efeito de movimento */
+        /*animation: gradientAnimation 10s ease infinite; /* Animação com duração de 10 segundos em loop */
+
+    }
+
+    
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .border{
+        border: 1px solid black;
+    }
+    .bgcolor{
+        background: green;
+    }
+
+   
+    #main-header{
+        z-index: 10;
+        align-items: center; /* Centraliza verticalmente */
+        justify-content: center; /* Centraliza horizontalmente (opcional) */
+        display: flex;
+        position: sticky;
+        top: 0px;
+        max-width: 1920px;
+        height: 100px; /* Altura inicial */
+        padding: 4px;
+        padding-left: 15px;
+        padding-right: 15px;
+        background-color: none;
+        transition:  0.3s ease; /* Transição suave para a mudança de altura */
+    }
+    .header{
+        align-items: center; /* Centraliza verticalmente */
+        justify-content: center; /* Centraliza horizontalmente (opcional) */
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: 100px;
+    }
+
+    .header a{
+        max-height: 100px;
+        height: auto;
+    }
+    .suportelink{
+        color: #fff;
+        text-decoration: none;  
+    }
+    #ezstudio{
+        
+        margin: 0px;
+        width: auto;
+        height: 100px;
+        
+        transition: height 0.3s ease; /* Transição suave para a mudança de altura */
+    }
+    #ezstudio:hover{
+        content: url('ezgamestudiopurple.png'); /* Troca a imagem ao passar o mouse */
+        width: auto;
+        height: 100px;
+        transition: height 0.3s ease; /* Transição suave para a mudança de altura */
+    }
+    /* menu */
+    #suporte{
+        display: flex;
+        align-items: center; /* Centraliza verticalmente */
+        justify-content: center; /* Centraliza horizontalmente (opcional) */
+        color: white;
+        margin: 0 auto;
+        justify-content: space-between;
+        text-align: right;
+        background-color: #000000;
+        width: 100%;
+        height: auto;
+    }
+    #suporte p {
+        padding: 4px;
+        padding-right: 15px;
+    }
+    .menu li {
+        margin-right: 20px; /* Espaçamento entre os itens do menu */
+    }
+    
+    .menu a {
+        text-decoration: none; /* Remove o sublinhado padrão */
+        color: #333; /* Cor do texto */
+        font-weight: bold;
+        transition: all 0.3s ease; /* Transição suave para o hover */
+    }
+    
+    
+    /* animação sublinhado menu*/
+    
+    .font-white{
+        color: #fff;
+    }
+    
+    .contentmenu {
+        
+        padding-bottom: 5px;
+        position: relative;
+        color: #fff;
+        text-decoration: none;  
+      }
+    
+    .contentmenu:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #fff;
+        visibility: hidden;
+        -webkit-transform: scaleX(0);
+        transform: scaleX(0);
+        -webkit-transition: all 0.3s ease-in-out 0s;
+        transition: all 0.3s ease-in-out 0s;
+      }
+      
+      .contentmenu:hover:before {
+        visibility: visible;
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+      }
+    
+      /* estilização da barra de pesquisa */
+    
+     
+    /* login estilização */
+    
+    #login{
+        padding-right: 20px;
+        padding-left: 4px;
+       
+    }
+    #loginimg{
+        width: 50px;
+        height: 50px;
+    }
+    #loginimg:hover{
+        cursor: pointer;
+    }
+    
+    .imagem-girando {
+        width: 200px;
+        height: auto;
+        transition: transform 1s linear;
+    }
+    
+    .imagem-girando:hover {
+        transform: rotate(180deg);
+    }
+    /* banner carousel */
+
+.banner{
+    position: relative;
+    width: 100%;
+    height: 510px;
+}
+#carousel{
+    display: flex;
+    width: 100%;
+    height: 510px;
+}
+.flex-active-slide a img{
+    display: flex;
+    width: 100%;
+    height: 910px;
+}
+
+.flex-active-slide{
+    display: flex;
+    flex-direction: column;
+    height: 510px;
+    width: 100%;
+    overflow: hidden;
+
+}
+.slides{
+    display: flex;
+    flex-direction: row;
+    height: 510px;
+    width: 100%;
+}
+
+.ove-hidde{
+    display: flex;
+    width: 100%;
+    height: 510px;
+    overflow: hidden;
+}
+
+.flex-control-nav{
+    position: absolute;
+    z-index: 5;
+    top: 400px;
+    left: calc(50% - 25px);
+    display: flex;
+    width: auto;
+    height: 100px;
+}
+/* banner dots */
+
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #3b3b3b;
+  }
+  
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+
+  /* content estilizaçao */
+
+/* slides */
+
+.mySlides {display: none}
+
+
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1920px;
+  position: relative;
+  margin: auto;
+}
+
+
+
+    .search-bar{
+        display: none;
+    }
+    #sonheader {
+        position: relative;
+        flex-direction: row;
+        padding: 10px;
+    }
+
+    /* Esconde o menu em dispositivos móveis */
+    .menu {
+        position: absolute;
+        top: 115px;
+        display: none;
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+        transition: all 0.3s ease; /* Transição suave para o hover */
+
+    }
+
+    /* Mostra o menu quando o ícone do mobile menu é clicado */
+    .menu.active {
+        display: flex;
+    }
+    .mobile-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #666666;
+        padding: 5px;
+        border-radius: 5px;
+        background: rgba(0, 0, 0, 0.671) ;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+    }
+    
+    .mobile-menu div {
+        width: 100%;
+        height: 4px;
+        background-color: #fff;
+        margin: 3px 0;
+    }
+
+    
+    #divone{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+        width: 100%;
+        height:100%;
+        justify-content:center;
+    }
+
+    #welcome{
+        padding: 5px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        width: auto;
+        height: 300px;
+    }
+    #welcome h1{
+        color: white;
+        font-size: 70px;
+    } 
+
+}
+
+/* ------------------------------------------------- */
+
+/* ----------------------------------------------------------*/
+
+
