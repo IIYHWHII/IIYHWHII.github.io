@@ -34,13 +34,41 @@
         <div id="button-disc">
             <a href="https://discord.gg/JeheyNnf" class="discord-button" target="_blank">Join our Discord</a>
         </div>
+        <div style="margin-top: 40px;">
+        <iframe src="https://discord.com/widget?id=1227820323341336646&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+        </div>
     </div>
-    
+
+    <div class="triangle"></div>
+<style>
+        .triangle {
+            width: 0;
+            height: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-bottom: 100px solid #3498db;
+            position: relative;
+            cursor: pointer; /* Muda o cursor quando passa sobre o triângulo */
+        }
+
+        .triangle::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 200%;
+            height: 200%;
+            background: rgba(0, 0, 0, 0.1); /* Fundo com transparência */
+            transform: translate(-50%, -50%);
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%); /* Cria um fundo triangular */
+            z-index: -1; /* Coloca o fundo atrás do triângulo */
+        }
+
+</style>
 <!--_______________________________________________________________________ -->
     <!-- banner carousel do site -->
 
     <!--    scripts -->
-        
     <script src="carregarhtml.js"></script>
     <script src="togglemenumobile.js"></script>
     <script src="visitCount.js"></script>
