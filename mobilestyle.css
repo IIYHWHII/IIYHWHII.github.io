@@ -366,9 +366,85 @@
         font-size: 70px;
     } 
 
+    /* ------------------------------------------------- */
+
+    #new{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #winone, 
+    #wintwo {
+        margin: 0px;
+    cursor:pointer;
+    height: 450px;
+    width: 100%;
+    filter: brightness(50%); /* Define o brilho inicial */
+    overflow: hidden; /* Para evitar que o skew afete o layout fora da div */
+    transform: skew(0deg); /* Aplica a distorção skew */
+    position: relative; /* Define o contexto de posicionamento para os filhos */
+    /*margin: 20px; /* Ajusta o espaço ao redor das divs */
+    }
+
+
+    
+    #oneimg,
+    #twoimg {
+    transform: skew(0deg); /* Reverte a distorção skew nas divs filhas */
+    position: absolute; /* Reposiciona o conteúdo para evitar o overflow */
+
+    width: 120%;
+    height: 100%; /* Faz com que as divs filhas ocupem o mesmo espaço que os pais */
+    transition: background-size 0.5s ease; /* Transição suave para o efeito de hover */
+
+    }
+
+    #oneimg{
+        background-image: url('assets/prg-bg.jpg'); /* Caminho para sua imagem de fundo */
+        
+        background-size:200%; /* Ajusta a imagem para cobrir a div */
+        background-position: 0px;
+    }
+    
+    #twoimg{
+        background-image: url('assets/3d-bg.png'); /* Caminho para sua imagem de fundo */
+        background-repeat: no-repeat;
+        background-size:200%; /* Ajusta a imagem para cobrir a div */
+        background-position: 0px;
+    }
+
+    
+    .content-3d{
+        margin-left: 0px;
+        height: auto;
+        width: 300px;
+        top: 100px;
+        position: absolute;
+    }
+
+
+    .content-art{
+        left: 75px;
+        margin-left: 0px ;
+        height: auto;
+        width: 300px;
+        top: 100px;
+        position: absolute;
+    }
+
+
+    #oneimg:hover,
+    #twoimg:hover {
+
+    filter: brightness(50%); /* Escurece o background ao passar o mouse */
+    background-size: 250%; /* Aumenta o tamanho do background ao passar o mouse */
+    transition: background-size 0.5s ease; /* Transição suave para o efeito de hover */
+
+    }
+
 }
 
-/* ------------------------------------------------- */
+
 
 /* ----------------------------------------------------------*/
 
