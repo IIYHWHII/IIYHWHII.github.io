@@ -1,0 +1,124 @@
+#new {
+max-width: 100%;
+height: auto;
+display: flex;
+overflow: hidden; /* Oculta o conteúdo que ultrapassa a borda da div */
+position: relative; /* Define o contexto de posicionamento */
+padding-bottom: 2.5rem;
+justify-content: center;
+}
+
+#winone, 
+#wintwo {
+cursor:pointer;
+height: 450px;
+width: 100%;
+filter: brightness(100%); /* Define o brilho inicial */
+overflow: hidden; /* Para evitar que o skew afete o layout fora da div */
+transform: skew(20deg); /* Aplica a distorção skew */
+position: relative; /* Define o contexto de posicionamento para os filhos */
+/*margin: 20px; /* Ajusta o espaço ao redor das divs */
+}
+#wintwo {
+border-top: 3px solid yellow;;
+border-bottom: 50px solid yellow;
+margin-left: 20px;
+}
+#winone {
+
+border-top: 50px solid yellow;
+
+border-bottom: 3px solid yellow;;
+}
+
+#oneimg,
+#twoimg {
+transform: skew(-20deg); /* Reverte a distorção skew nas divs filhas */
+position: absolute; /* Reposiciona o conteúdo para evitar o overflow */
+
+width: 120%;
+height: 100%; /* Faz com que as divs filhas ocupem o mesmo espaço que os pais */
+transition: background-size 0.5s ease; /* Transição suave para o efeito de hover */
+
+}
+
+#oneimg:hover,
+#twoimg:hover {
+
+  filter: brightness(50%); /* Escurece o background ao passar o mouse */
+  background-size: 90%; /* Aumenta o tamanho do background ao passar o mouse */
+  transition: background-size 0.5s ease; /* Transição suave para o efeito de hover */
+
+}
+
+
+#oneimg{
+    background-image: url('assets/prg-bg.jpg'); /* Caminho para sua imagem de fundo */
+    
+    background-size:70%; /* Ajusta a imagem para cobrir a div */
+    background-position: 100px;
+}
+
+#twoimg{
+    margin-left: -20%;
+    background-image: url('assets/3d-bg.png'); /* Caminho para sua imagem de fundo */
+    
+    background-size:70%; /* Ajusta a imagem para cobrir a div */
+    background-position: 100px;
+}
+
+#new .a-slices{
+flex: 0 0 100%;
+max-width: 100%;
+padding-right: 0;
+padding-left: 0;
+position: relative;
+}
+
+.a-slices:last-child {
+margin-top: 3.75rem;
+margin-right: -0%;
+}
+
+.content-3d{
+    left: 50px;
+    height: auto;
+    width: 300px;
+    top: 50px;
+    position: absolute;
+}
+.content-3d h2{
+    color: white;
+}
+.content-3d h1{
+    color: yellow;
+    font-size: 40px;
+}
+.content-3d p{
+    color: white;
+    font-size: 17px;
+}
+
+
+.content-art{
+    right: 90px;
+    height: auto;
+    width: 300px;
+    bottom: 100px;
+    position: absolute;
+}
+
+.content-art h1{
+    color: yellow;
+    font-size: 40px;
+}
+
+
+.content-art h2{
+    color: white;
+}
+
+.content-art p{
+    color: white;
+    font-size: 17px;
+}

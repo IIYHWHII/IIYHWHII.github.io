@@ -1,0 +1,24 @@
+/* Estiliza a barra de rolagem */
+::-webkit-scrollbar {
+    width: 12px; /* Largura do scroll */
+    height: 12px; /* Altura do scroll horizontal */
+  }
+  
+  /* Estiliza o fundo da barra de rolagem (track) */
+  ::-webkit-scrollbar-track {
+    background: black; /* Cor de fundo preta */
+    border-radius: 10px; /* Bordas arredondadas */
+  }
+  
+  /* Estiliza a "bolinha" da barra de rolagem (thumb) */
+  ::-webkit-scrollbar-thumb {
+    background-color: yellow; /* Cor da bolinha do scroll */
+    border-radius: 10px; /* Bordas arredondadas */
+    border: 3px solid black; /* Borda preta ao redor da bolinha */
+  }
+  
+  /* Efeito hover para a bolinha do scroll */
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: gold; /* Mudança de cor ao passar o mouse */
+  }
+  

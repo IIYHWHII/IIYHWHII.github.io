@@ -54,6 +54,7 @@
         background-color: #000000;
         width: 100%;
         height: auto;
+        border-bottom: 2px solid yellow;
     }
     #suporte p {
         padding: 4px;
